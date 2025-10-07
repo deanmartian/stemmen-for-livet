@@ -171,7 +171,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: \`https://minnelyd.no/auth/callback\`,
+          redirectTo: 'https://minnelyd.no/auth/callback',
         },
       })
       return { error: error ? new Error(error.message) : null }
